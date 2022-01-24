@@ -1,0 +1,5 @@
+.terraform.locl.hcl
+.terraform
+terraform.tfstate*
+key.json
+spring-petclinic

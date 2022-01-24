@@ -1,0 +1,20 @@
+[Unit]
+Description= Spring Petclinic Webapp Service ( https://github.com/spring-projects/spring-petclinic.git ). 
+[Service]
+User=zheniakushnir7
+# The configuration file application.properties should be here:
+
+#change this to your workspace
+WorkingDirectory=/home/zheniakushnir7/spring-petclinic/
+
+#path to executable. 
+#executable is a bash script which calls jar file
+ExecStart=/home/zheniakushnir7/service_script.sh
+
+SuccessExitStatus=143
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
